@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@1.0.0/cmu-serif.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- SEO Meta Tags -->
+    <title>Your Name - Personal Website</title>
+    <meta name="description" content="Personal website of Fatima Zahra Iguenfer" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Your Name" />
+    <meta property="og:description" content="Personal website of Fatima Zahra Iguenfer" />
+    <meta property="og:type" content="website" />
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" />
+    <meta name="theme-color" content="#2E3440" />
+
+    <style>
+        /* Global Styles */
+        ::selection {
+            background: #c9ecff;
+        }
+
+        ::-moz-selection {
+            background: #c9ecff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-family: 'CMU Serif', serif;
+            text-rendering: optimizeLegibility;
+            line-height: 1.7;
+        }
+
+        body {
+            background: #ffffff;
+            color: #3a343a;
+            font-size: 18px;
+            text-rendering: optimizeLegibility;
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        p a {
+            border-bottom: 1px solid #4C566A;
+        }
+
+        h1 {
+            font-size: 230%;
+            line-height: 1.2;
+            margin-bottom: 0.2em;
+        }
+
+        p {
+            margin-top: 1.4rem;
+            margin-bottom: 1.4rem;
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 2px solid #2E3440;
+            padding-left: 1.4rem;
+            margin-left: -1.4rem;
+        }
+
+        /* Layout Styles */
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex-grow: 1;
+        }
+
+        .page-layout {
+            display: flex;
+            justify-content: center;
+            margin: 3em 1em;
+        }
+
+        @media (max-width: 768px) {
+            .page-layout {
+                flex-direction: column;
+            }
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            max-width: 21rem;
+            margin-right: 1rem;
+            padding: 1rem;
+            padding-right: 2rem;
+            font-size: 80%;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            /* space between image and text */
+            margin-bottom: 1em;
+        }
+
+
+        .profile-pic {
+            border-radius: 50%;
+        }
+
+        .profile-name {
+            font-weight: 700;
+            margin: 0.5em 0em;
+        }
+
+        .social-links {
+            margin-top: 0.7em;
+            opacity: 0.7;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-links span {
+            margin-bottom: 0.5em;
+            border-bottom: 1px solid transparent;
+            text-align: center;
+        }
+
+        .social-links span+span {
+            margin-left: 0.2em;
+        }
+
+        .social-links a:hover {
+            border-bottom: 1px solid #4C566A;
+        }
+
+        .navigation {
+            list-style-type: none;
+            padding: 1em 0em;
+        }
+
+        .navigation li {
+            margin-left: -0.5em;
+            padding-left: 0em;
+        }
+
+        .navigation li a {
+            outline: none;
+            border-left: 1px solid transparent;
+            padding: 0.5em 0.5em 0.5em 0.5em;
+            font-weight: 700;
+        }
+
+        .navigation li a:hover {
+            border-left: 1px solid lightgray;
+        }
+
+        .navigation li a.active {
+            border-left: 1px solid #4C566A;
+        }
+
+        /* Main Content Styles */
+        .main {
+            max-width: 680px;
+            flex-grow: 1;
+            padding: 1em;
+        }
+
+        .article {
+            margin: 2em 0em;
+        }
+
+        .article:first-of-type {
+            margin-top: 0em;
+        }
+
+        .article:last-of-type {
+            margin-bottom: 0em;
+        }
+
+        .article-meta {
+            font-size: 80%;
+            text-transform: lowercase;
+            font-weight: 700;
+            font-variant: small-caps;
+        }
+
+        .article-title {
+            font-weight: 600;
+            margin: 0.2em 0em;
+            line-height: 1.2;
+        }
+
+        .article-excerpt {
+            margin: 0;
+            font-size: 80%;
+        }
+
+        /* Footer Styles */
+        .footer {
+            padding: 1em;
+            color: #d8dee9;
+            text-align: center;
+            max-width: 648px;
+            margin: 0 auto;
+            font-size: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="page-layout">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <img alt="My profile picture"
+                        src="/Users/user/Downloads/OnlinePortfolio/static/portfolioPicture.jpg" width="150" height="150"
+                        class="profile-pic" />
+                    <div class="profile-name">Fatima Zahra Iguenfer</div>
+                    <div>
+                        Hi there! Thanks for visiting my digital portfolio. This is FZI, I recently graduated Al Akhawayn University with a BS in CS, now I work as Jnr. Data Analyst for Bell Canada. If you want to reach out, collaborate, or
+                        just say hello,
+                        click one of the contact links below.
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <span><a target="_blank" href="mailto:fz.iguenfer@gmail.com">Em@il</a></span>
+                        <span><a target="_blank" href="https://github.com/patime07">Github</a></span>
+                        <span><a target="_blank" href="https://www.linkedin.com/in/fziguenfer/">LinkedIn</a></span>
+                        <span><a target="_blank"
+                                href="https://scholar.google.com/citations?user=1P6rJxYAAAAJ&hl=en&authuser=2">Google
+                                Scholar</a></span>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div>
+                        <ul class="navigation">
+                            <li><a class="active" href="/">News</a></li>
+                            <li><a href="static/Resume.pdf">Vitae</a></li>
+                            <li><a href="workexperience.html">Work Experience</a></li>
+                            <li><a href="researchexperience.html">Research Experience</a></li>
+                            <li><a href="lecturenotes.html">Lecture Notes</a></li>
+                            <li><a href="articles.html">Articles</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="honors&awards.html">Honors & Awards</a></li>
+                            <li><a href="talks.html">Talks</a></li>
+                            <li><a href="volunteering.html">Volunteering</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <main class="main">
+                
+                    <!-- Example news entry -->
+                    <div class="article">
+                        <div class="article-meta">September 25, 2025</div>
+                        <h5 class="article-title">Launched My Personal Website</h5>
+                        <p class="article-excerpt">
+                            Excited to share my new personal website where I’ll post updates about my work, projects,
+                            and achievements.
+                        </p>
+                    </div>
+
+                    <div class="article">
+
+                        <div class="article-meta">September 10, 2025</div>
+                        <h3 class="article-title">Accepted Paper at IEEE CiSt’2025</h3>
+                        <p class="article-excerpt">
+                            Our paper on Digital Energy ID (DE-ID) has been accepted at the IEEE Conference on
+                            Information Science and
+                            Technology (CiSt’2025) in Marrakech.
+                        </p>
+                    </div>
+
+                    <div class="article">
+                        <div class="article-meta">August 20, 2025</div>
+                        <h3 class="article-title">Started Preparing for Graduate School</h3>
+                        <p class="article-excerpt">
+                            Preparing to begin my MSc in Intelligent Systems at the University of Pittsburgh in Fall
+                            2026.
+                        </p>
+                    </div>
+                </main>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            © 2025 All rights reserved.
+        </footer>
+    </div>
+</body>
+
+</html>

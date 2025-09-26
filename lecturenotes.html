@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@1.0.0/cmu-serif.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- SEO Meta Tags -->
+    <title>Your Name - Personal Website</title>
+    <meta name="description" content="Personal website of Fatima Zahra Iguenfer" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Your Name" />
+    <meta property="og:description" content="Personal website of Fatima Zahra Iguenfer" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" />
+    <meta name="theme-color" content="#2E3440" />
+
+    <style>
+        /* Global Styles */
+        ::selection {
+            background: #c9ecff;
+        }
+
+        ::-moz-selection {
+            background: #c9ecff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-family: 'CMU Serif', serif;
+            text-rendering: optimizeLegibility;
+            line-height: 1.7;
+        }
+
+        main {
+            font-family: 'CMU Serif', serif;
+        }
+
+        main h1,
+        main h2,
+        main h3 {
+            font-family: 'CMU Serif', serif;
+            text-transform: uppercase;
+            color: #0b3f61;
+        }
+
+        main h4 {
+            font-family: 'CMU Serif', serif;
+            text-transform: uppercase;
+            color: #085b93;
+        }
+
+        /* Cambridge Notes specific styles for h4 and h5 */
+        main h5 {
+            font-family: 'CMU Serif', serif;
+            text-transform: none;
+            color: #3a343a;
+            font-weight: normal;
+        }
+
+        main h4.course,
+        main h5.course {
+            font-weight: normal;
+            margin-top: 0.3em;
+            margin-bottom: 0em;
+        }
+
+        body {
+            background: #ffffff;
+            color: #3a343a;
+            font-size: 18px;
+            text-rendering: optimizeLegibility;
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        h1 {
+            font-size: 230%;
+            line-height: 1.2;
+            margin-bottom: 0.2em;
+        }
+
+        p {
+            margin-top: 1.4rem;
+            margin-bottom: 1.4rem;
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 2px solid #2E3440;
+            padding-left: 1.4rem;
+            margin-left: -1.4rem;
+        }
+
+        /* Layout Styles */
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex-grow: 1;
+        }
+
+        .page-layout {
+            display: flex;
+            justify-content: center;
+            margin: 3em 1em;
+        }
+
+        @media (max-width: 768px) {
+            .page-layout {
+                flex-direction: column;
+            }
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            max-width: 21rem;
+            margin-right: 1rem;
+            padding: 1rem;
+            padding-right: 2rem;
+            font-size: 80%;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1em;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+        }
+
+        .profile-name {
+            font-weight: 700;
+            margin: 0.5em 0em;
+        }
+
+        .social-links {
+            margin-top: 0.7em;
+            opacity: 0.7;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-links span {
+            margin-bottom: 0.5em;
+            text-align: center;
+        }
+
+        .social-links span+span {
+            margin-left: 0.2em;
+        }
+
+        .navigation {
+            list-style-type: none;
+            padding: 1em 0em;
+        }
+
+        .navigation li {
+            margin-left: -0.5em;
+            padding-left: 0em;
+        }
+
+        .navigation li a {
+            outline: none;
+            border-left: 1px solid transparent;
+            padding: 0.5em 0.5em 0.5em 0.5em;
+            font-weight: 700;
+        }
+
+        .navigation li a:hover {
+            border-left: 1px solid lightgray;
+        }
+
+        .navigation li a.active {
+            border-left: 1px solid #4C566A;
+        }
+
+        /* Main Content Styles */
+        .main {
+            max-width: 680px;
+            flex-grow: 1;
+            padding: 1em;
+        }
+
+        .article {
+            margin: 2em 0em;
+        }
+
+        .article:first-of-type {
+            margin-top: 0em;
+        }
+
+        .article:last-of-type {
+            margin-bottom: 0em;
+        }
+
+        .article-meta {
+            font-size: 80%;
+            text-transform: lowercase;
+            font-weight: 700;
+            font-variant: small-caps;
+        }
+
+        .article-title {
+            font-weight: 600;
+            margin: 0.2em 0em;
+            line-height: 1.2;
+        }
+
+        .article-excerpt {
+            margin: 0;
+            font-size: 80%;
+        }
+
+        /* Cambridge Notes Specific Styles */
+        .note-additional {
+            color: #444;
+        }
+
+        .extras {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .unavailable,
+        .extras a {
+            display: inline-block;
+            padding: 0.1em;
+            margin-top: 0.2em;
+            margin-bottom: 0.2em;
+            margin-right: 0.5em;
+            text-align: center;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            flex-basis: auto;
+            flex-grow: 0;
+        }
+
+
+        .unavailable {
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Course sections */
+        main section {
+            margin-bottom: 2em;
+        }
+
+        main section section {
+            margin-bottom: 1.5em;
+            margin-left: 1em;
+        }
+
+        /* Responsive adjustments */
+        @media only screen and (max-width: 600px) and (min-width: 400px) {
+
+            .unavailable,
+            .extras a {
+                flex-basis: 20%;
+            }
+
+            .extras a.long {
+                flex-basis: 40%;
+            }
+
+            .extras {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+
+            .unavailable,
+            .extras a {
+                flex-basis: 33%;
+            }
+
+            .extras {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Footer Styles */
+        .footer {
+            padding: 1em;
+            color: #d8dee9;
+            text-align: center;
+            max-width: 648px;
+            margin: 0 auto;
+            font-size: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="page-layout">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <img alt="My profile picture"
+                        src="/Users/user/Downloads/OnlinePortfolio/static/portfolioPicture.jpg" width="150" height="150"
+                        class="profile-pic" />
+                    <h3 class="profile-name">Fatima Zahra Iguenfer</h3>
+                    <div>
+                        On this page you will find my lecture notes at Al Akhawayn University (BSc in CompSci focused on
+                        AI), practice problems, and links to coding projects.
+                        Most of my notes are handwritten, but I went digital starting Spring 2024 (Junior year) using
+                        Samsung Notes. Some homework assignments were completed using LaTeX.
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <span><a target="_blank" href="mailto:fz.iguenfer@gmail.com">Em@il</a></span>
+                        <span><a target="_blank" href="https://github.com/patime07">Github</a></span>
+                        <span><a target="_blank" href="https://www.linkedin.com/in/fziguenfer/">LinkedIn</a></span>
+                        <span><a target="_blank"
+                                href="https://scholar.google.com/citations?user=1P6rJxYAAAAJ&hl=en&authuser=2">Google
+                                Scholar</a></span>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div>
+                        <ul class="navigation">
+                            <li><a href="index.html">News</a></li>
+                            <li><a href="static/Resume.pdf">Vitae</a></li>
+                            <li><a href="workexperience.html">Work Experience</a></li>
+                            <li><a href="researchexperience.html">Research Experience</a></li>
+                            <li><a class="active" href="lecturenotes.html">Lecture Notes</a></li>
+                            <li><a href="articles.html">Articles</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="honors&awards.html">Honors & Awards</a></li>
+                            <li><a href="talks.html">Talks</a></li>
+                            <li><a href="volunteering.html">Volunteering</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <main>
+                    <p>
+                        Please note that these notes reflect my personal understanding of the material and include additional content I
+                        added after<br>
+                        lectures, so they should not be considered official course materials or exact representations of
+                        what was covered in<br>
+                        any particular semester.
+                    </p>
+                    <section>
+                        <h3>Senior Year</h3>
+                        <section>
+                            <h4>Spring 2025 Term</h4>
+
+                            <h4 class='course'>
+                                CSC 3315: Advanced Distributed Programming Paradigms <span class='note-additional'>(Dr.
+                                    Omar Iaqi)</span>
+                            </h4>
+                            <div class='extras'>
+                                <a href='/notes/IV_E/bounded_cohomology.pdf' title='Full version'>All Paradigms</a>
+                                <a href='/notes/IV_E/bounded_cohomology.pdf' title='Full version'>Paradigm 1</a>
+                                <a href='/notes/IV_E/bounded_cohomology.pdf' title='Full version'>Paradigm 2</a>
+                                <a href='/notes/IV_E/bounded_cohomology.pdf' title='Full version'>Paradigm 3</a>
+                                <a href='/notes/IV_E/bounded_cohomology.pdf' title='Full version'>Paradigm 4</a>
+                                <span class='/notes/IV_E/bounded_cohomology.pdf'>Official Slides</span>
+                            </div>
+
+
+
+                            <h4 class='course'>
+                                MTH 3303: Mathematical Modeling and Optimization <span class='note-additional'>(Dr.
+                                    Jaouad Abrach)</span>
+                            </h4>
+                            <div class='extras'>
+                                <a href='/notes/IV_E/bounded_cohomology.pdf' title='Full version'>Module 1</a>
+                                <a href='/notes/IV_E/bounded_cohomology.pdf' title='Full version'>Module 2</a>
+                                <a href='/notes/IV_E/bounded_cohomology.pdf' title='Full version'>Module 3</a>
+                                <a href='/notes/IV_E/bounded_cohomology.pdf' title='Full version'>Module 4</a>
+                            </div>
+
+                        </section>
+
+                        <section>
+                            <h4>Fall 2024 Term</h4>
+
+                            <h4 class='course'>
+                                CSC 4425: Machine Learning <span class='note-additional'>(Dr. Chtouki Yousra)</span>
+                            </h4>
+                            <div class='extras'>
+                                <a href='/notes/ml/supervised_learning.pdf' title='Supervised Learning'>Supervised
+                                    Learning</a>
+                                <a href='/notes/ml/unsupervised_learning.pdf' title='Unsupervised Learning'>Unsupervised
+                                    Learning</a>
+                                <a href='/notes/ml/deep_learning.pdf' title='Deep Learning'>Deep Learning</a>
+                                <a href='/notes/ml/final_project.pdf' title='Final Project'>Final Project</a>
+                            </div>
+                        </section>
+
+                    </section>
+
+                    <section>
+                        <h3>Junior Year</h3>
+                        <section>
+                            <h4>Spring 2024 Term</h4>
+                            <h4 class='course'>
+                                CSC 3326: Database Systems <span class='note-additional'>(Dr. Lamiaa Bouanane)</span>
+                            </h4>
+                            <div class='extras'>
+                                <a href='/notes/db/relational_model.pdf' title='Relational Model'>Relational Model</a>
+                                <a href='/notes/db/sql_advanced.pdf' title='Advanced SQL'>Advanced SQL</a>
+                                <a href='/notes/db/normalization.pdf' title='Database Normalization'>Normalization</a>
+                                <a href='/notes/db/transactions.pdf' title='Transactions'>Transactions</a>
+
+                            </div>
+
+
+                            <h4 class='course'>
+                                CSC 3444: Software Engineering <span class='note-additional'>(Dr. )</span>
+                            </h4>
+                            <div class='extras'>
+                                <a href='/notes/se/requirements.pdf' title='Requirements Engineering'>Requirements</a>
+                                <a href='/notes/se/design_patterns.pdf' title='Design Patterns'>Design Patterns</a>
+                                <a href='/notes/se/testing.pdf' title='Software Testing'>Testing</a>
+                                <a href='/notes/se/project_management.pdf' title='Project Management'>Project
+                                    Management</a>
+
+                            </div>
+
+                        </section>
+                    </section>
+
+                    <section>
+                        <h3>Comments & Feedback</h3>
+                        <p>Found a typo, mistake, or have a question about these notes? Let me know!</p>
+                        <form id="feedbackForm">
+                            <div style="margin-bottom: 1em;">
+                                <label for="subject">Subject:</label><br>
+                                <input type="text" id="subject" name="subject" style="width: 100%; padding: 0.5em; margin-top: 0.3em;" placeholder="e.g. Typo in Database Systems notes, Question about Paradigm 3">
+                            </div>
+                            <div style="margin-bottom: 1em;">
+                                <label for="comment">Comment:</label><br>
+                                <textarea id="comment" name="comment" rows="4" style="width: 100%; padding: 0.5em; margin-top: 0.3em;" placeholder="Point out typos, ask questions, or suggest improvements..."></textarea>
+                            </div>
+                            <button type="submit" style="padding: 0.7em 1.5em; background: #0b3f61; color: white; border: none; cursor: pointer;">Send Feedback</button>
+                        </form>
+                    </section>
+                    
+                    <script>
+                    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        
+                        const subject = document.getElementById('subject').value;
+                        const comment = document.getElementById('comment').value;
+                        
+                        const mailtoLink = `mailto:fz.iguenfer@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(comment)}`;
+                        
+                        window.location.href = mailtoLink;
+                    });
+                    </script>
+
+                </main>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        © 2025 All rights reserved.
+    </footer>
+</body>
+
+</html>
